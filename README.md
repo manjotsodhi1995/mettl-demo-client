@@ -1,27 +1,27 @@
 # MettlDemoClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+# File app is made using Angular 8 and it has the following features:
+- Ability to view all the files
+- Ability to search a particular file by name
+- Ability to add new file with title description.
+- Ability to change the status of file from publish to unpublish state and vice versa
+- Ability to edit the title and description of the file
+- Ability to delete a particular file 
+- Ability to delete all files.
 
-## Development server
+# In order to run this project in your local , following things are required :
+- Node js installed 
+- Angular cli installed 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# In order to run the project locally
 
-## Code scaffolding
+- Clone the Repo https://github.com/manjotsodhi1995/mettl-demo-client/
+- cd mettl-demo-client
+- Run the command npm install ( to download all dependencies)
+- Run the command npm start ( to make in run on port 4200)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# For demo purposes , the code has been deployed on netlify.app
 
-## Build
+Visit the following url to view the running application and test the flows https://mettl-demo-client.netlify.app/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+We can run the application in local environement as well.
