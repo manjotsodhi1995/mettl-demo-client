@@ -1,0 +1,78 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="title"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>Files List</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let file of Files; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveFile(file, i)"
+      >
+        {{ file.title }}
+      </li>
+    </ul>
+
+    <div style="display: flex;">
+      <button
+        *ngIf="Files.length"
+        class="m-3 btn btn-sm btn-danger"
+        (click)="removeAllFiles()"
+      >
+        Remove All
+      </button>
+
+      <div>
+        <p *ngIf="!Files.length">
+          No Files Found , Please Add files to continue
+        </p>
+        <button class="m-3 btn btn-sm btn-info" (click)="navigateToAdd()">
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentfile">
+      <h4>File</h4>
+      <div>
+        <label><strong>Title:</strong></label> {{ currentfile.title }}
+      </div>
+      <div>
+        <label><strong>Description:</strong></label>
+        {{ currentfile.description }}
+      </div>
+      <div>
+        <label><strong>Status:</strong></label>
+        {{ currentfile.published ? "Published" : "Pending" }}
+      </div>
+
+      <a class="badge badge-warning" routerLink="/files/{{ currentfile.id }}">
+        Edit
+      </a>
+    </div>
+
+    <div *ngIf="Files.length && !currentfile">
+      <br />
+      <p>Please click on a file...</p>
+    </div>
+  </div>
+</div>
